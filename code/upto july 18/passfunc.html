@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // (
+    //     function(){
+    //         alert('hey u called me without invoking.');
+    //     }
+    // )();
+
+
+    // (
+    //     function(name, location){
+    //         alert('hello name is ' + name +' and location is ' + location);
+    //     }
+    // )('smith','bangaluru');
+
+
+
+// function outerfunc(param){
+//     function innerfunc(input){
+//         return input * 4;
+//     }
+//     return 'the result is '+ innerfunc(param);
+// }
+// outerfunc(12);
+
+
+        function test(){
+            alert("inside test");
+            return function(){
+                alert("inside returned function");
+            }
+        }
+        var newfunc = test();
+        newfunc();
+
+    
+    </script>
+</body>
+</html>

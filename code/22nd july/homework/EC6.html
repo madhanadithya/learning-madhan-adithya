@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+class Vehicle {
+        constructor() {
+        console.log('Running Automatically')
+        }
+        displayType() {
+        console.log('Car');
+        }
+       }
+       let vehicle = new Vehicle()
+
+
+       class Vehicle1 {
+            constructor() {
+                console.log('The Base Vehicle.');
+            }
+       }
+       class Tesla extends Vehicle1 {
+            constructor() {
+            super();
+            console.log('The Tesla Vehicle.')
+        }
+       }
+       let model3 = new Tesla();
+
+
+       class Vehicle2 {
+        getPropulsion() {
+        return 'Gas Powered';
+        }
+       }
+       class Tesla2 extends Vehicle2 {
+        getPropulsion() {
+        return 'Electric Powered';
+        }
+       }
+       let modelx = new Tesla2();
+       let poweredby = modelx.getPropulsion();
+       console.log(poweredby);
+
+
+       class Vehicle4 {
+        constructor() {
+        this.kindof = 'Car';
+        }
+       }
+       class Tesla3 extends Vehicle4 {
+        constructor() {
+        super();
+        }
+       }
+       let car = new Tesla3();
+       console.log(car.kindof);
+       
+
+    </script>
+
+</body>
+</html>

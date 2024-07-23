@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cars =[
+            {
+                "color":"red",
+                "type":"station wagon",
+                "capacity":7
+            },
+            {
+                "color":"red",
+                "type":"cabrio",
+                "capacity":3
+            },
+            {
+                "color":"black",
+                "type":"camaro",
+                "capacity":5
+            }
+        ]
+
+            let size = cars.map(car =>{
+                if (car.capacity <= 3){
+                    return "small";
+                }
+                if(car.capacity <= 5){
+                    return "medium";
+                }
+                return "large";
+            });
+            console.log(size);
+
+
+            let sortedcars = cars.sort((c1,c2) =>(c1.capacity < c2.capacity)? 1:(c1.capacity > c2.capacity) ? -1 : 0);
+            console.log(sortedcars);
+    </script>
+</body>
+</html>

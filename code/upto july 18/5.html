@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional & switch statements</title>
+</head>
+<body>
+    <p id = new1></p>
+<script>
+    let time = new Date().getHours();
+    let greetings;
+    if(time < 12){
+        greetings = "good morning";
+    }else if(time < 7 && time > 12){
+        greetings = "good afternoon";
+    }else{
+        greetings = "good night";
+    }
+    document.getElementById("new1").innerHTML = greetings;
+
+
+
+    let x = new Date().getDay();
+    let output;
+    switch(x){
+        case 0:
+            output = "sunday.";
+            break;
+        case 1:
+            output = "monday.";
+            break;
+        case 2:
+            output = "tuesday.";
+            break;
+        case 3:
+            output = "wednesday.";
+            break;
+        case 4:
+            output = "thursday.";
+            break;
+        case 5:
+            output = "friday.";
+            break;
+        case 6:
+            output = "saturday.";
+            break;
+        default:
+            output = "invalid.";
+            break;
+    }
+    alert(output);
+</script>
+</body>
+</html>

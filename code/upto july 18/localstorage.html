@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="training location"/>
+    <button onclick="showLocation">show location</button>
+    <button onclick="storetrainlocation">store traing location</button>
+
+ 
+    <script>
+        function storetrainlocation(){
+            let inpob = document.querySelector("input");
+            let traininglocation = inpob.value;
+            localStorage.setItem("training_location", traininglocation);
+            alert("training location stored.");
+        }
+        function showLocation(){
+            let traininglocation = localStorage.getItem("training_location");
+            alert(traininglocation);
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="student"/>
+    <button onclick="addstudent()"> add student </button>
+    <button onclick="showstudent()"> show students</button>
+    <button onclick="removeallstudents()"> remove all students</button>
+    <script>
+        let student = [];
+
+        function addstudent(){
+            let inpob = document.querySelector("input");
+            let stuname = inpob.value;
+            localStorage.setItem("student_name", stuname);
+            alert("student name stored.");
+        }
+        function showstudent(){
+            let sname = localStorage.getItem("student_name");
+            alert(sname);
+        }
+
+        function removeallstudents(){
+            localStorage.clear();
+            alert("students name removed");
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops. </title>
+</head>
+<body>
+    <p id="loop"></p>
+<script>
+// //for loop
+//     let text="";
+//     for(let i=0;i<5;i++){
+//         text += i + "<br>";
+//     }
+//     document.getElementById("loop").innerHTML = text;
+
+//for in loop
+
+    let value = {studentname:"madhan", facultyname:"sumit", stuage:20, location: "bengaluru", duration: "2 months"}
+    let text1 = "";
+    for(let i in value){
+        alert(value[i]);
+        text1 += value[i];
+    }
+    document.getElementById("loop").innerHTML = text1;
+
+
+// //while loop
+
+//     let y = 1, text2 = "";
+//     while(y<=10){
+//         text2+=y+"<br>";
+//         y++;
+//     }
+
+//     document.getElementById("loop").innerHTML = text2;
+    
+</script>
+    
+</body>
+</html>

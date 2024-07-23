@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function outerfunc(param){
+            var privatevar = 5;
+            var innerfunc = function(input){
+                alert('param passed to function is '+ param + "and private variable is "+ privatevar);
+                var sum = privatevar + input + param ;
+                alert('addition of private variable, input and param is '+ sum);
+            }
+            return innerfunc;
+        }
+
+        var closurefunc = outerfunc(12);
+        closurefunc(4);
+    </script>
+</body>
+</html>

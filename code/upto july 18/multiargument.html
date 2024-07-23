@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function sum(){
+        //     console.log(arguments);
+        //     alert(arguments.length);
+        // }
+
+        function greates(){
+            let val= arguments[0];
+            let size = arguments.length;
+            for(let i = 0; i<size;i++){
+                if(arguments[i]>val){
+                    val = arguments[i];
+                }
+            }
+            alert(val);
+
+        }
+
+        //sum(2,3);
+        //sum(1,2,3,4);
+
+        greates(1,2,10)
+
+
+        function sumeven(){
+            
+            let op=0;
+            let i=2;
+            for(let x = 0; x<arguments[0];x++){
+                op+=i;
+                i+=2;
+            }
+            alert(op);
+
+        }
+
+        sumeven(4)
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hero(name,planet){
+            this.name = name;
+            this.planet = planet;
+            this.sayname = function(){
+                alert(this.name);
+            }
+            this.sayage = function(){
+                alert(this.age);
+            }
+        }
+
+        var ob1 = new hero("spiderman", "earth");
+        var ob2 = new hero("superman", "crypton");
+        ob1.sayname();
+        ob2.sayname();
+
+        ob1.age = 20;
+        ob1.sayage();
+
+    </script>
+</body>
+</html>

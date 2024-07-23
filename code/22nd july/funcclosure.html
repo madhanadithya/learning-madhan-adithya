@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ticketgenerator(transportmode){
+            var generateticket = function(destination){
+                return transportmode + "--" + destination + "123";
+            }
+            return generateticket;
+        }
+
+        var flightticketgenerator = ticketgenerator("flight");
+       // var flightticketgenerator = ticketgenerator("ship");
+        alert(flightticketgenerator("chennai"));
+        alert(flightticketgenerator("singapore"));
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student = ["madhan", "adithya", "rsp"];
+        console.log(typeof(student));
+
+        console.log("array to string using json stringify");
+        let str = JSON.stringify(student);
+        console.log(str);
+        console.log(typeof(str));
+
+        console.log("string to array using json parse")
+        let convert_back = JSON.parse(str);
+        console.log(convert_back);
+        console.log(typeof(convert_back));
+
+        console.log(convert_back[1]);
+
+    </script>
+</body>
+</html>

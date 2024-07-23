@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="student"/>
+    <button onclick="addstudent()"> add student </button>
+    <button onclick="showstudent()"> show students</button>
+    <button onclick="removeallstudents()"> remove all students</button>
+    <script>
+        let student = [];
+
+        function addstudent(){
+            let inpob = document.querySelector("input");
+            let stuname = inpob.value;
+
+            student.push(stuname);
+
+            let str = JSON.stringify(student);
+
+            localStorage.setItem("student_name", str);
+            alert("student name stored.");
+        }
+        function showstudent(){
+            let sname = localStorage.getItem("student_name");
+            let conv_stu = JSON.parse(sname);
+            alert(conv_stu);
+        }
+
+        function removeallstudents(){
+            localStorage.clear();
+            alert("students name removed");
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cars =[
+            {
+                "color":"red",
+                "type":"station wagon",
+                "capacity":7
+            },
+            {
+                "color":"red",
+                "type":"cabrio",
+                "capacity":5
+            },
+            {
+                "color":"black",
+                "type":"camaro",
+                "capacity":4
+            }
+        ]
+
+        let car = cars.find(car => car.color ==="black");
+        console.log(typeof(cars))
+    </script>
+</body>
+</html>

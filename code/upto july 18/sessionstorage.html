@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function storetrainlocation(){
+            let inpob = document.querySelector("input");
+            let traininglocation = inpob.value;
+            sessionStorage.setItem("training_location", traininglocation);
+            alert("training location stored.")
+        }
+        function showLocation(){
+            let traininglocation = sessionStorage.getItem("training_location");
+            alert(traininglocation);
+        }
+    </script>
+</body>
+</html>

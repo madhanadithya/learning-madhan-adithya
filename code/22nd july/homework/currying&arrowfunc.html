@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function multiply(a, b, c) {
+            return a * b * c;
+        }
+        function multiply_curried(a) {
+            return function (b) {
+                return function (c) {
+                    return a * b * c
+                }
+            }
+        }
+        let res = multiply(1, 2, 3);
+        console.log(res);
+        let mc1 = multiply_curried(1);
+        let mc2 = mc1(2);
+        let res2 = mc2(3);
+        console.log(res2);
+        let res3 = multiply_curried(1)(2)(3);
+        console.log(res3);
+
+
+        let multiply_arrow = (a) => (b) => (c) => {
+            return a * b * c;
+        }
+
+        let res4 = multiply_arrow(1)(2)(3);
+        console.log(res4);
+    </script>
+</body>
+</html>

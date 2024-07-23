@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function introd() {
+            let name = 'madhan adithya';
+            function displayName() {
+            return 'i am' + ' ' + name;
+            }
+            return displayName;
+            }
+            const temp = introd();
+            console.log(temp);
+            console.log(temp());
+
+
+
+            function calculate(x) {
+            function multiply(y) {
+            return x * y;
+            }
+            return multiply;
+            }
+            const multiply3 = calculate(3);
+            const multiply4 = calculate(4);
+            console.log(multiply3); 
+            console.log(multiply3());
+            console.log(multiply3(6));
+            console.log(multiply4(2)); 
+
+            let a = 0;
+            function sum() {
+                function increaseSum() {
+                    return a = a + 1;
+                }
+            return increaseSum;
+            }
+            const x = sum();
+            console.log(x()); 
+            console.log(x()); 
+            console.log(x()); 
+            a = a + 1;
+            console.log(a);  
+
+
+    </script>
+</body>
+</html>

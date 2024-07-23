@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"> click me</div>
+    <button onclick="removeEvent()">remove event</button>
+    <script>
+        let ref = document.getElementById("container");
+        ref.addEventListener("click" , showmymsg1);
+        ref.addEventListener("click" , showmymsg2);
+        function showmymsg1(){
+            alert("this is msg 1....")
+        }
+        function showmymsg2(){
+            alert("this is msg 2....")
+        }
+        function removeEvent(){
+            ref.removeEventListener("dblclick", showmymsg1);
+        }
+    </script>
+</body>
+</html>

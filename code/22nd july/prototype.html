@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function gods(age, strength){
+            this.age = age;
+            this.strength = strength;
+            this.displaystrength = function(){
+                alert(`the strength is ${this.strength}`);
+            }
+        }
+
+        let somegodob = new gods("huge" , "extremely high");
+
+        function hero(name, planet){
+            this.name = name;
+            this.planet = planet;
+            this.sayname = function(){
+                alert(this.name);
+            };
+        }
+
+        hero.prototype = somegodob;
+        hero.prototype.constructor = hero;
+        let deadpoolob = new hero("deadpool", "madripoor");
+        deadpoolob.displaystrength()
+        alert(deadpoolob.age);
+        console.log(deadpoolob);
+        console.log(deadpoolob.constructor);
+
+    </script>
+    
+</body>
+
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width ,initial-scale=1">
+    <title> js objects</title>
+</head>
+<body>
+<script>
+
+    let playerob = new Object();
+    playerob.name = "rohit";
+    playerob.age = 37;
+    playerob.playertype = ["batter", "spinner"];
+    playerob.score = function(){
+        alert("scored 11 centuries");
+        alert("his real age is " + this.age);
+    } 
+
+    alert(playerob.name);
+    alert(playerob.age);
+    alert(playerob.playertype[0]);
+    playerob.score();    
+</script>
+</body>
+</html>

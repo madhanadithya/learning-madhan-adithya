@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" class="name" />
+    <button onclick="addname()"> add student </button>
+
+    <input type="text" class="native"/>
+    <button onclick="addnative()"> add native </button>
+
+    <input type="text" class="age"/>
+    <button onclick="addage()"> add age </button>
+
+
+    <button onclick="showstudent()"> show all students</button>
+    <button onclick="removeallstudents()"> remove all students</button>
+
+    <script>
+        let student = {};
+
+        function addname(){
+            let inpob = document.querySelector(".name");
+            let sname = inpob.value;
+            student.name = sname;
+            storeStudent();
+            alert("student name stored.");
+        }
+
+        function addnative(){ 
+            let inpob1 = document.querySelector(".native");
+            let snative = inpob1.value;
+            student.native = snative;    
+            storeStudent();
+            alert("student native stored.");
+        }
+
+        function addage(){
+            let inpob2 = document.querySelector(".age");
+            let sage = inpob2.value;
+            student.age = sage;     
+            storeStudent();
+            alert("student age stored.");  
+        }
+
+        function storeStudent() {
+            let str = JSON.stringify(student);
+            localStorage.setItem("student_name", str);
+        }
+
+        function showstudent(){
+            let sn = localStorage.getItem("student_name");
+            let conv_stu = JSON.parse(sn);
+            alert("Name: " + conv_stu.name + ", Native: " + conv_stu.native + ", Age: " + conv_stu.age);
+        }
+
+        function removeallstudents(){
+            localStorage.clear();
+            alert("students name removed");
+        }
+    </script>
+</body>
+</html>

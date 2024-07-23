@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class student{
+            name;
+            age;
+            hobbies;
+            #password;
+            constructor(name,age,hobbies,password){
+                this.name = name;
+                this.age = age;
+                this.hobbies = hobbies;
+                this.#password = password;
+            }
+            showage(){
+                alert(`the age of ${this.name} is ${this.age}`);
+            }
+            showpassword(){
+                alert(`the private property password is ${this.#password}`);
+            }
+        }
+        let madhanob = new student("madhan",21 , ["trekking", "cooking", "sleeping"], "hahhaa");
+        madhanob.showage();
+        madhanob.hobbies();
+        console.log(madhanob);
+        madhanob.showpassword();
+
+        class fullstackstudent extends student{
+            expertise;
+            jobprobability;
+            constructor(name, age, hobbies, password, expertise, jobprobability){
+                super(name,age,hobbies,password);
+                this.expertise = expertise;
+                this.jobprobability = jobprobability;
+            }
+            showjobprobability(){
+                alert(`the job probability is ${this.jobprobability}`);
+            }
+        }
+
+        let adithyaob = new fullstackstudent("adithya", 22 ,["reading book", "sleeping"], "lallaal", " full stack developer", 99);
+        adithyaob.showage();
+        adithyaob.showjobprobability();
+        adithyaob.password();
+    </script>
+</body>
+</html>

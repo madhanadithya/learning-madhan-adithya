@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News letter </title>
+  
+ <style>
+   main{
+   	border : 2px solid blue ;      	
+	padding : 20px;
+   	margin : 10px; 
+   }
+   
+   #menu {
+   	border : 2px solid blue;
+   	margin : 10px;
+   	padding : 5px; 	
+   }
+   
+   #menu a{
+   	
+   	margin : 20px;
+   	padding : 5px; 	
+   }
+   
+   a{
+   	text-decoration : none;
+   }
+   
+   article{
+   	text-align : center;  	
+   }
+
+   {
+    border: 2px solid blue;
+   }
+   
+ </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+    <div id = "menu">
+      <a href = "/home.html"> Home </a>
+      <a href = "/about.html"> About </a>
+      <a href = "/Contact.html"> Contact </a>
+    </div>  
+  	</nav>
+
+    <figure>
+        <img src="bangalore.jpg" alt="bangalore"/>
+        <figcaption> Amazing bangalore</figcaption> 
+    </figure>
+  </header>
+  
+  <main>
+    <div>
+      <article id = "rainny"> 
+        <h2> heavy rain in bangalore </h2>
+        <div id ="div1"> 
+          most of the areas are affected.<br><br>
+          <footer> written by adithya.</footer>
+        </div>
+      </article>
+      
+      <article id = "cricket"> 
+        <h2> there is new cricket stadium in bangalore</h2>
+        <div> 
+          people are having fun over there.<br><br>
+          <footer> written by madhan.</footer> 
+        </div>
+      </article>
+ 
+    </div>  
+  </main>
+
+<footer id="f1">
+    <a href="/policy.html">Policy</a>
+    <a href="/privacy.html"> Privacy</a>
+</footer>
+
+<script>
+    let articleob = document.getElementById("rainny");
+    articleob.style.color = "red";
+    articleob.style.marginLeft = "100px";
+    articleob.style.margin = "10px";
+    articleob.style.padding = "15px";
+    articleob.style.border = "2px solid blue";
+    articleob.onclick = function(){
+        alert("did u click me?");
+    } 
+    //articleob.textContent = " i deleted ur content, hahaha...";
+
+    const articleob2 = document.getElementById("cricket");
+    function randomcolor(){
+        return Math.floor(Math.random() * 255);
+    }
+    articleob2.addEventListener('click', () => {
+        articleob2.style.backgroundColor = 
+        'rgba(' + randomcolor() + ',' + randomcolor() + ',' + randomcolor() + '\)'
+    })
+</script>
+
+</body>
+</html>     
+      
+      
+      
+      

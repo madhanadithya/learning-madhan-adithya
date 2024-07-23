@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv">
+        my div
+        <h1>heading inseide div</h1>
+    </div>
+
+    <div class="myclass"> my div</div>
+    <h1>this is h11</h1>
+    <h1>this is h12</h1>
+
+    <script>
+        let mydivob = document.querySelector("#mydiv");
+        let myclassob = document.querySelector(".myclass");
+        let firsth1 = document.querySelector("h1");
+        alert(mydivob.textContent);
+        alert(myclassob.textContent);
+        alert(firsth1.textContent);
+
+        let h1tag = document.querySelectorAll("h1");
+        h1tag[0].style.color = "green";
+
+        let h1taginsidediv = document.querySelector("#mydiv h1");
+        h1taginsidediv.style.color = "red";
+
+    </script>
+</body>
+</html>
