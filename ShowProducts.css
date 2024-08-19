@@ -1,0 +1,275 @@
+/* .outer {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 45%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: azure;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inside {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-top: 30px;
+}
+
+button {
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button.show-products {
+    background-color: #007bff;
+    color: white;
+}
+
+button.add-product {
+    background-color: #28a745;
+    color: white;
+}
+
+button.add-category {
+    background-color: #ffc107;
+    color: black;
+}
+
+button.delete-product {
+    background-color: red;
+    color: white;
+}
+
+button.view-details {
+    background-color: rgb(64, 195, 64);
+    color: white;
+}
+ */
+
+
+
+
+/* 
+ .outer {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 75%; 
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: azure;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button.show-products {
+    background-color: #007bff;
+    color: white;
+}
+
+button.add-product {
+    background-color: #28a745;
+    color: white;
+}
+
+button.add-category {
+    background-color: #ffc107;
+    color: black;
+}
+
+button.delete-product {
+    background-color: red;
+    color: white;
+}
+
+button.view-details {
+    background-color: rgb(64, 195, 64);
+    color: white;
+}
+
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.product-table th,
+.product-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.product-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.product-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.product-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.search-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+ */
+
+
+
+ /* ShowProducts.css */
+
+.outer {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 75%; /* Adjusted width to accommodate table */
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: azure;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button.show-products {
+    background-color: #007bff;
+    color: white;
+}
+
+button.add-product {
+    background-color: #28a745;
+    color: white;
+}
+
+button.add-category {
+    background-color: #ffc107;
+    color: black;
+}
+
+button.delete-product {
+    background-color: red;
+    color: white;
+}
+
+button.view-details {
+    background-color: rgb(64, 195, 64);
+    color: white;
+}
+
+/* Table styles */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.product-table th,
+.product-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.product-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.product-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Search input styling */
+.search-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Ensures full-width search input */
+}
+
+/* Pagination styles */
+.MuiTablePagination-root {
+    margin-top: 20px;
+}
+
+/* Table container styling */
+.MuiTableContainer-root {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+/* IconButton styles */
+.MuiIconButton-root {
+    margin-right: 10px;
+}
