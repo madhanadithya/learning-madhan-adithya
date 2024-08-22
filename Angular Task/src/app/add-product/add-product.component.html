@@ -1,0 +1,42 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="code">Code</label>
+      <input id="code" formControlName="code"  placeholder="Enter the product code"/>
+    </div>
+  
+    <div>
+      <label for="name">Name</label>
+      <input id="name" formControlName="name"  placeholder="Enter the Name"/>
+    </div>
+  
+    <div>
+      <label for="excerpt">Excerpt</label>
+      <input id="excerpt" formControlName="excerpt" placeholder="Enter the Excerpt" />
+    </div>
+  
+    <div>
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description" placeholder="Enter the Description"></textarea>
+    </div>
+  
+    <div>
+      <label for="price">Price</label>
+      <input id="price" formControlName="price" type="number"  placeholder="Enter the Price"/>
+    </div>
+  
+    <div>
+      <label for="stock">Stock</label>
+      <input id="stock" formControlName="stock" type="number" placeholder="Enter the Stock Quantity" />
+    </div>
+  
+    <div>
+      <label for="category">Category</label>
+      <select id="category" formControlName="category" >
+        <option value="" disabled selected>Select category</option>
+        <option *ngFor="let category of categories" [value]="category._id" >{{ category.name }}</option>
+      </select>
+    </div>
+  
+    <button type="submit">Add Product</button>
+</form>
+  
