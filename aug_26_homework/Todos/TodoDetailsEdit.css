@@ -1,0 +1,37 @@
+.todo-details-edit .todo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.todo-details-edit .todo-form input,
+.todo-details-edit .todo-form select,
+.todo-details-edit .todo-form textarea,
+.todo-details-edit .todo-form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.todo-details-edit .todo-form textarea {
+    min-height: 100px;
+}
+
+.todo-details-edit .todo-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.todo-details-edit .todo-form button:hover {
+    background-color: #218838;
+}
