@@ -3,30 +3,27 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import CreateProduct from './pages/CreateProduct';
 import ProductList from './pages/ProductList';
+import ProductForm from './components/ProductForm';
 import Navbar from './components/Navbar';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#d32f2f', // Red color
-    },
-    secondary: {
-      main: '#1976d2', // Blue color for secondary elements
-    },
-  },
-});
+import Footer from './components/Footer';
+import CssBaseline from '@mui/material/CssBaseline';
+import './App.css'; 
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <>
+      <CssBaseline />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/create" element={<CreateProduct />} />
-        <Route path="/products" element={<ProductList />} />
-      </Routes>
-    </ThemeProvider>
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create" element={<CreateProduct />} />
+          <Route path="/products" element={<ProductList />} />
+          <Route path="/product/:id/edit" element={<ProductForm />} />
+        </Routes>
+      </div>
+      <Footer />
+    </>
   );
 }
 

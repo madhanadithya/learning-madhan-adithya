@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box } from '@mui/material';
 import ProductForm from '../components/ProductForm';
 
 const CreateProduct = () => (
-  <Box>
-      <ProductForm />
-  </Box>
+  <div>
+    <h1>Create a Product</h1>
+    <ProductForm />
+  </div>
 );
 
 export default CreateProduct;
